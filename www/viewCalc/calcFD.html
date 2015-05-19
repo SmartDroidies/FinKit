@@ -1,0 +1,63 @@
+<form class="rounded-form" data-toggle="validator" role="form">
+	<div class="row-input">
+		<div class="field-label">
+			<label for="inputPrincipal">Principal (Rs.)</label>
+		</div>
+		<div class="field-value">	
+			<input class="form-control field-medium" type="number" min="1000" max="999999" id="inputPrincipal" required ng-model="invest.principal" placeholder="Principal" />
+		</div>	
+	</div>
+	<div class="row-input">
+		<div class="field-label">
+			<label for="inputIntRate">Rate of Interest(%)</label>
+		</div>	
+		<div class="field-value">	
+			<input class="form-control" id="inputIntRate" type="number" step="0.01" min="4" max="20" required ng-model="invest.interest" placeholder="Rate of Interest" />
+		</div>
+	</div>
+	<div class="row-input">
+		<div class="field-label">
+			<label for="inputPeriod">Period</label>
+		</div>	
+		<div class="field-value-multi">
+			<input class="form-control" type="number" min="0" max="366"  id="inputPeriod" required ng-model="invest.period" />
+		</div>
+		<div class="field-value-multi">
+			<select class="form-control" id="inputPeriodType" required ng-model="invest.periodType">
+				<option value="365" slected>days</option>
+				<option value="12">months</option>
+				<option value="1">years</option>
+			</select>
+		</div>
+	</div>
+	<div class="row-input">
+		<div class="field-label">
+			<label for="inputFrequency">Frequency</label>
+		</div>	
+		<div class="field-value">	
+			<select class="form-control" id="inputFrequency" required ng-model="invest.frequency">
+				<!--option value="0">Simple Interest</option-->
+				<option value="12">Compounded Monthly</option>
+				<option value="4" >Compounded Quarterly</option>
+				<option value="2">Compounded Half Yearly</option>
+				<option value="1">Compounded Yearly</option>							
+			</select>			
+		</div>
+	</div>
+	<div class="row-input centered">
+		<button type="submit" ng-click="calculate(invest)" class="btn btn-warning">Calculate</button>
+		<button type="submit" ng-click="reset()" class="btn btn-warning">Clear</button	>
+	</div>
+	<pre>form = {{invest | json}}</pre>
+	<div class="result">
+		<div class="result-field">	
+			Investment : {{result.investment}}
+		</div>
+		<div class="result-field">	
+			Maturnity Value : {{result.maturity}}
+		</div>
+		<div class="result-field">	
+			Interest Earned : {{result.earned}}
+		</div>
+	</div
+</form>

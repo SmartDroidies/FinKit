@@ -1,0 +1,9 @@
+<p>This is the listing view for all calculators</p>
+<ul id="calcList" class="list-main">
+    <li ng-repeat="calc in calcs">
+		<img ng-src="{{calc.imageUrl}}" class="launch-icon">
+		<a href="#/{{calc.view}}" class="section">
+			<h3 class="head after-image">{{calc.name}}</h3>
+		</a>		
+    </li>
+</ul>
