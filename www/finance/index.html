@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="finkitApp"> 
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>Finance Kit</title>
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="css/app.css">
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+	</head>
+	<body>
+		<!--ul class="menu">
+			<li><a href="#/viewCalc">Calc View</a></li>
+			<li><a href="#/viewKit">Kit View</a></li>
+		</ul-->
+		<div ng-view></div>
+		<!--div>Angular seed app: v<span app-version></span></div-->
+
+		<script src="js/angular/angular.js"></script>
+		<script src="js/angular-route/angular-route.min.js"></script>
+		<script src="app.js"></script>
+		<script src="viewCalc/viewCalc.js"></script>
+		<script src="viewKit/viewKit.js"></script>
+		<script src="components/version/version.js"></script>
+		<script src="components/version/version-directive.js"></script>
+		<script src="components/version/interpolate-filter.js"></script>
+
+	 </body>
+</html>
