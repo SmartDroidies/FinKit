@@ -1,0 +1,48 @@
+<form class="rounded-form" data-toggle="validator" role="form">
+	<div class="row-input">
+		<div class="field-label">
+			<label for="inputLoanAmount">Loan Amount (Rs.)</label>
+		</div>
+		<div class="field-value">	
+			<input class="form-control field-medium" type="number" min="1000" max="999999" id="inputLoanAmount" required ng-model="loan.amount" placeholder="Loan Amount" />
+		</div>	
+	</div>
+	<div class="row-input">
+		<div class="field-label">
+			<label for="inputIntRate">Rate of Interest(%)</label>
+		</div>	
+		<div class="field-value">	
+			<input class="form-control" id="inputIntRate" type="number" step="0.01" min="5" max="30" required ng-model="loan.interest" placeholder="Rate of Interest" />
+		</div>
+	</div>
+	<div class="row-input">
+		<div class="field-label">
+			<label for="inputTenure">Loan Tenure</label>
+		</div>	
+		<div class="field-value-multi">
+			<input class="form-control" type="number" min="0" max="366"  id="inputTenure" required ng-model="loan.tenure" />
+		</div>
+		<div class="field-value-multi">
+			<select class="form-control" id="inputTenureType" required ng-model="loan.tenureType">
+				<option value="12">year</option>
+				<option value="1">month</option>
+			</select>
+		</div>
+	</div>
+	<div class="row-input centered">
+		<button type="submit" ng-click="calculate(loan)" class="btn btn-warning">Calculate</button>
+		<button type="submit" ng-click="reset()" class="btn btn-warning">Clear</button	>
+	</div>
+	<!--pre>form = {{loan | json}}</pre-->
+	<div class="result">
+		<div class="result-field">	
+			Monthly EMI : {{result.emi}}
+		</div>
+		<div class="result-field">	
+			Total Interest Payable : {{result.interest}}
+		</div>
+		<div class="result-field">	
+			Total Payment (Principal + Interest) : {{result.total}}
+		</div>
+	</div
+</form>
