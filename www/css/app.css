@@ -1,4 +1,9 @@
 /* app css stylesheet */
+h1,h2,h3, p, div, span, label {
+	font-family: fantasy;
+	color: #864803;
+} 
+
 
 .menu {
   list-style: none;
@@ -29,17 +34,21 @@
   padding: 0;
 }
 
-/* Main List Styling */
+body > .content, body > .menu {
+  padding: 50px 0 0 0;
+}
 
+/* Main List Styling */
 ul.list-main {
-	background-color : rgb(249, 232, 235);
 	margin: 0px;
 	padding: 5px;	
 }
 
 ul.list-main  li {
 	list-style-type: none;
-	min-height: 60px;
+	min-height: 60px; 
+	background-color: #EFEFEC;
+  	margin: 5px;	
 }
 
 ul.list-main  li  a {
@@ -49,8 +58,9 @@ ul.list-main  li  a {
 
 ul.list-main  li  a  h3 {
 	float: left;
-	margin-top : 10px;
+	margin: 5px 10px;
 	padding: 5px;
+	font-size: 20px;
 }
 
 ul.list-main  li  img {
@@ -69,13 +79,12 @@ img.launch-icon {
 }
 
 .rounded-form {
-	margin : 5px;
 	padding : 10px;
-	background-color : rgb(249, 232, 235);
+	background-color : #EFEFEC;
 }
 
 .row-input {
-	margin : 10px 3px;
+	margin : 5px 5px;
 	padding : 0px;
 	width : 100%;
 	min-height : 35px;
@@ -83,21 +92,22 @@ img.launch-icon {
 
 .field-label {
 	padding : 2px;
-	width : 40%;
+	width : 50%;
 	float : left;
 	margin-top : 5px;
 }
 
 .field-value {
-	width : 60%;
+	width : 50%;
 	float : left;
 	margin : auto;
+	padding : 2px 2px;
 }
 
 .field-value-multi {
-	width : 30%;
 	float : left;
 	margin : auto;
+	padding: 2px 2px;
 }
 
 .centered {
@@ -105,5 +115,61 @@ img.launch-icon {
 }
 
 .result {
-	
+	background-color: #ECDAC2;
+  	padding: 5px 10px;
+}
+
+.result div {
+	padding: 5px 10px;	
+	font-size: 18px;
+  	font-weight: bold;	
+}
+
+.header {
+	background-color: #ECDAC2;
+}
+
+.main-header {
+	position : relative;
+	min-height : 45px;
+}
+
+.menu-control {
+	position : absolute;
+	left : 5px;
+	top : 15px;
+}
+
+.head_section {
+	margin: 5px 5px 5px 30px;
+	vertical-align: middle;
+	height: 100%;	
+}
+
+.main-title {
+	color: #1F1F1F;
+	font-size: 20px;
+	font-weight: bold;	
+	margin: 2px;
+	padding: 10px 0px 0px 5px;
+}
+
+.paddless {
+ 	padding : 0px;
+}
+
+.nomargin {
+ 	margin : 0px; 
+}
+
+.list-item {
+	padding:  5px 5px;
+  	/*
+  	background: #FDF6E8;
+  	box-shadow: 2px 5px 5px 5px #41300E;  
+  	*/
+}
+
+a.section {
+
 }

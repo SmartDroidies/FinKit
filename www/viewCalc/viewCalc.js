@@ -40,19 +40,21 @@ angular.module('finkitApp.viewCalc', ['ngRoute'])
 	$scope.master = {};
 
 	$scope.reset = function() {
-		alert('Reset Form');
+		this.displayFDCalc();
 	};
 
 	$scope.calculate = function(invest) {
 		if(!angular.isUndefined(invest) && !angular.isUndefined(invest.principal) && !angular.isUndefined(invest.interest) && !angular.isUndefined(invest.period) && !angular.isUndefined(invest.frequency)) {
 			$scope.result = CalcService.cacluateFD(invest);
+			$("#result").show();
 		}
 	};
 
 	
 	//Function to display the list of calculators
 	$scope.displayFDCalc = function() {
-		$scope.msg = "Display FD Calculator";
+		
+		$("#result").hide();
 
 		var defInvest = {};
 		defInvest.interest = 8.5;
@@ -71,7 +73,9 @@ angular.module('finkitApp.viewCalc', ['ngRoute'])
 .controller('ViewCalcRDCtrl', ['$scope', '$http', 'CalcService', function($scope, $http, CalcService) {
 	//Function to display the list of calculators
 	$scope.displayRDCalc = function() {
-		$scope.msg = "Display RD Calculator";
+
+		$("#result").hide();
+
 		var defInvest = {};
 		defInvest.interest = 8.5;
 		defInvest.period = 12;
@@ -80,11 +84,17 @@ angular.module('finkitApp.viewCalc', ['ngRoute'])
 		$scope.invest = defInvest;
 	};
 
+	$scope.reset = function() {
+		this.displayRDCalc();
+	};
+
 	
 	$scope.calculate = function(invest) {
 		if(!angular.isUndefined(invest) && !angular.isUndefined(invest.instalment) && !angular.isUndefined(invest.interest) && !angular.isUndefined(invest.period)) {
 			$scope.result = CalcService.cacluateRD(invest);
+			$("#result").show();
 		}
+
 	};
 
 	
