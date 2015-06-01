@@ -106,7 +106,9 @@ angular.module('finkitApp.viewCalc', ['ngRoute'])
 .controller('ViewCalcPLCtrl', ['$scope', '$http', 'CalcService', function($scope, $http, CalcService) {
 	//Function to display the list of calculators
 	$scope.displayPLCalc = function() {
-		$scope.msg = "Display PL Calculator";
+
+		$("#result").hide();
+
 		var defLoan = {};
 		defLoan.amount = 300000;
 		defLoan.interest = 17.5;
@@ -119,7 +121,12 @@ angular.module('finkitApp.viewCalc', ['ngRoute'])
 	$scope.calculate = function(loan) {
 		if(!angular.isUndefined(loan) && !angular.isUndefined(loan.amount) && !angular.isUndefined(loan.interest) && !angular.isUndefined(loan.tenure) && !angular.isUndefined(loan.tenureType)) {
 			$scope.result = CalcService.cacluatePL(loan);
+			$("#result").show();
 		}
+	};
+
+	$scope.reset = function() {
+		this.displayPLCalc();
 	};
 	
 	//Default function call
