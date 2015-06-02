@@ -7,6 +7,14 @@
     <author email="dev@cordova.apache.org" href="http://cordova.io">
         Apache Cordova Team
     </author>
+	<platform name="android">
+		<!--icon src="res/android/finkit_ldpi.png" density="ldpi" /-->
+        <icon src="res/android/finkit_mdpi.png" density="mdpi" />
+        <icon src="res/android/finkit_hdpi.png" density="hdpi" />
+        <icon src="res/android/finkit_xhdpi.png" density="xhdpi" />
+        <icon src="res/android/finkit_xxhdpi.png" density="xxhdpi" />
+        <icon src="res/android/finkit_xxxhdpi.png" density="xxxhdpi" />
+	</platform>    
     <content src="index.html" />
     <access origin="*" />
 </widget>

@@ -1,6 +1,11 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="com.smart.droid.finkit" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <preference name="loglevel" value="DEBUG" />
+    <icon density="mdpi" src="res/android/finkit_mdpi.png" />
+    <icon density="hdpi" src="res/android/finkit_hdpi.png" />
+    <icon density="xhdpi" src="res/android/finkit_xhdpi.png" />
+    <icon density="xxhdpi" src="res/android/finkit_xxhdpi.png" />
+    <icon density="xxxhdpi" src="res/android/finkit_xxxhdpi.png" />
     <name>FinKit</name>
     <description>
         A sample Apache Cordova application that responds to the deviceready event.
