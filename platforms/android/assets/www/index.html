@@ -5,7 +5,8 @@
         <meta name="format-detection" content="telephone=no" />
         <meta name="msapplication-tap-highlight" content="no" />
         <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
-        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <!--meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" /-->
+        <script type="text/javascript" charset="utf-8" src="cordova.js"></script>  
         <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
         <link rel="stylesheet" type="text/css" href="css/app.css">
         <title>FinKit</title>
@@ -18,7 +19,7 @@
 		<nav class="navbar navbar-fixed-top nomargin paddless header" role="navigation">
 		  <div class="container-fluid">
 			<div class="navbar-header main-header">
-				<!--img id="menu-cntrl" class="menu-control" src="images/menu.png"/-->
+				<img id="menu-cntrl" class="menu-control" src="images/menu.png"/>
 				<div class="head_section">
 					<h2 id="main-title" class="main-title">FinKit India</h2>
 				</div>
@@ -28,11 +29,21 @@
 
 		<div ng-view class="content col-xs-12">
 		</div>
+		<div id="mainmenu" class="mainmenu">
+			<ul class="nav nav-list">
+				<li><a href="#/viewCalc" onclick="hideMenu()">Home</a></li>
+	            <li><a href="#" onclick="hideMenu()">Rate Me</a></li>
+	            <li><a href="#" onclick="hideMenu()">Share</a></li>
+				<li><a href="#" onclick="hideMenu()">Feedback</a></li>
+			</ul>
+		</div>
+
 		<!--div>Angular seed app: v<span app-version></span></div-->
 
 		<script src="js/angular/angular.js"></script>
 		<script src="js/angular-route/angular-route.min.js"></script>
 		<script src="js/jquery/jquery.min.js"></script>
+		<script src="js/finkit.js"></script>
 		<script src="app.js"></script>
 		<script src="viewCalc/viewCalc.js"></script>
 		<script src="viewKit/viewKit.js"></script>

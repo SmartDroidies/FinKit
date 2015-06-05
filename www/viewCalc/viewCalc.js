@@ -15,6 +15,12 @@ angular.module('finkitApp.viewCalc', ['ngRoute'])
   }).when('/viewPL', {
     templateUrl: 'viewCalc/calcPL.html',
     controller: 'ViewCalcPLCtrl'
+  }).when('/viewCL', {
+    templateUrl: 'viewCalc/calcCL.html',
+    controller: 'ViewCalcCLCtrl'
+  }).when('/viewHL', {
+    templateUrl: 'viewCalc/calcHL.html',
+    controller: 'ViewCalcHLCtrl'
   });
 }])
 
@@ -133,6 +139,67 @@ angular.module('finkitApp.viewCalc', ['ngRoute'])
 	$scope.displayPLCalc();
 }])
 
+//Controller to view Car Loan Schedule
+.controller('ViewCalcCLCtrl', ['$scope', '$http', 'CalcService', function($scope, $http, CalcService) {
+	//Function to display the list of calculators
+	$scope.displayCLCalc = function() {
+
+		$("#result").hide();
+
+		var defLoan = {};
+		defLoan.amount = 400000;
+		defLoan.interest = 12.5;
+		defLoan.tenure = 5;
+		defLoan.tenureType = "12";
+		$scope.loan = defLoan;
+	};
+
+	$scope.calculate = function(loan) {
+		if(!angular.isUndefined(loan) && !angular.isUndefined(loan.amount) && !angular.isUndefined(loan.interest) && !angular.isUndefined(loan.tenure) && !angular.isUndefined(loan.tenureType)) {
+			$scope.result = CalcService.cacluateCL(loan);
+			$("#result").show();
+		}
+	};
+
+	$scope.reset = function() {
+		this.displayCLCalc();
+	};
+	
+	//Default function call
+	$scope.displayCLCalc();
+}])
+
+//Controller to view Home Loan Schedule
+.controller('ViewCalcHLCtrl', ['$scope', '$http', 'CalcService', function($scope, $http, CalcService) {
+	//Function to display the list of calculators
+	$scope.displayHLCalc = function() {
+
+		$("#result").hide();
+
+		var defLoan = {};
+		defLoan.amount = 4000000;
+		defLoan.interest = 10.5;
+		defLoan.tenure = 20;
+		defLoan.tenureType = "12";
+		$scope.loan = defLoan;
+	};
+
+	$scope.calculate = function(loan) {
+		if(!angular.isUndefined(loan) && !angular.isUndefined(loan.amount) && !angular.isUndefined(loan.interest) && !angular.isUndefined(loan.tenure) && !angular.isUndefined(loan.tenureType)) {
+			$scope.result = CalcService.cacluateHL(loan);
+			$("#result").show();
+		}
+	};
+
+	$scope.reset = function() {
+		this.displayHLCalc();
+	};
+	
+	//Default function call
+	$scope.displayHLCalc();
+}])
+
+
 //Service for all the calculations
 .factory('CalcService', function() {
     var factory = {}; 
@@ -172,6 +239,36 @@ angular.module('finkitApp.viewCalc', ['ngRoute'])
 
 	// Calculate Personal Loan
 	factory.cacluatePL = function(loan) {
+		//console.log("Loan : " + JSON.stringify(loan));
+		var result = {}; 
+		
+		var r = loan.interest/12/100;
+		var n = loan.tenure * loan.tenureType;
+		
+		var emi = (loan.amount * r) * ((Math.pow(1+r, n))/(Math.pow(1+r, n) -1));
+		result.emi =  emi.toFixed(2);
+		result.total = (emi * n).toFixed(2);
+		result.interest = (result.total - loan.amount).toFixed(2);
+		return result;
+	}
+
+	// Calculate Car Loan
+	factory.cacluateCL = function(loan) {
+		//console.log("Loan : " + JSON.stringify(loan));
+		var result = {}; 
+		
+		var r = loan.interest/12/100;
+		var n = loan.tenure * loan.tenureType;
+		
+		var emi = (loan.amount * r) * ((Math.pow(1+r, n))/(Math.pow(1+r, n) -1));
+		result.emi =  emi.toFixed(2);
+		result.total = (emi * n).toFixed(2);
+		result.interest = (result.total - loan.amount).toFixed(2);
+		return result;
+	}
+
+	// Calculate Home Loan
+	factory.cacluateHL = function(loan) {
 		//console.log("Loan : " + JSON.stringify(loan));
 		var result = {}; 
 		

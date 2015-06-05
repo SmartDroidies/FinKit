@@ -1,0 +1,25 @@
+{
+    "version": "2.0.1",
+    "name": "com.admob.admobplugin",
+    "cordova_name": "AdmobPlugin",
+    "description": "\n   Google AdMob plugin for Cordova ,support cordova 5.0 and later, Phonegap and Intel XDK ,support ios and android,support admob v1 and admob v2 ,Monetize your app with one javascript line.simple and easy to use api.\n    project home:https://github.com/admob-google/admob-phonegap",
+    "license": "Apache 2.0 License",
+    "repo": "https://github.com/admob-google/admob-cordova",
+    "issue": "https://github.com/admob-google/admob-cordova/issues",
+    "keywords": [
+        "ad",
+        "admob",
+        "google",
+        "google-play-service",
+        "iad",
+        "flurry",
+        "device",
+        "adwhirl",
+        "cordova 5"
+    ],
+    "platforms": [
+        "android",
+        "ios"
+    ],
+    "engines": []
+}

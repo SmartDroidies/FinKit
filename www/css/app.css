@@ -34,7 +34,7 @@ h1,h2,h3, p, div, span, label {
   padding: 0;
 }
 
-body > .content, body > .menu {
+body > .content, body > .mainmenu {
   padding: 50px 0 0 0;
 }
 
@@ -173,3 +173,38 @@ img.launch-icon {
 a.section {
 
 }
+
+
+/* Menu Styling */
+#mainmenu  {
+	/*
+	background-color: #EFF0D7;
+	border-right: 2px solid #DADD94;
+	border-radius: 0px 0px 10px 0px;
+	*/
+	background: #EFEFEC;
+	box-shadow: 5px 5px 5px #888888;	
+	position: absolute;
+	top: 0px;
+	display : none;
+}
+
+#mainmenu ul li {
+	border-bottom: 1px Solid #C3C4BF;	
+}
+
+#mainmenu ul li  a {
+	font-size: 20px;
+	color: #864803;	
+	padding-right: 20px;
+}
+
+#mainmenu ul li.nav-header {
+	font-size: 22px;
+	padding: 10px;
+	color: #1F1F1F;	
+	font-weight : bold;
+	background: #ACACAC;
+}
+
+

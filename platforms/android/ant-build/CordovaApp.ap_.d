@@ -46,6 +46,7 @@
 /Users/prasathbasuvaraj/Documents/GitWorkSpace/FinKit/platforms/android/assets/www/index-old.html \
 /Users/prasathbasuvaraj/Documents/GitWorkSpace/FinKit/platforms/android/assets/www/index.html \
 /Users/prasathbasuvaraj/Documents/GitWorkSpace/FinKit/platforms/android/assets/www/js \
+/Users/prasathbasuvaraj/Documents/GitWorkSpace/FinKit/platforms/android/assets/www/plugins \
 /Users/prasathbasuvaraj/Documents/GitWorkSpace/FinKit/platforms/android/assets/www/version \
 /Users/prasathbasuvaraj/Documents/GitWorkSpace/FinKit/platforms/android/assets/www/viewCalc \
 /Users/prasathbasuvaraj/Documents/GitWorkSpace/FinKit/platforms/android/assets/www/viewKit \
@@ -72,6 +73,7 @@
 /Users/prasathbasuvaraj/Documents/GitWorkSpace/FinKit/platforms/android/assets/www/img/calc/recurring_deposit.jpg \
 /Users/prasathbasuvaraj/Documents/GitWorkSpace/FinKit/platforms/android/assets/www/js/angular \
 /Users/prasathbasuvaraj/Documents/GitWorkSpace/FinKit/platforms/android/assets/www/js/angular-route \
+/Users/prasathbasuvaraj/Documents/GitWorkSpace/FinKit/platforms/android/assets/www/js/finkit.js \
 /Users/prasathbasuvaraj/Documents/GitWorkSpace/FinKit/platforms/android/assets/www/js/jquery \
 /Users/prasathbasuvaraj/Documents/GitWorkSpace/FinKit/platforms/android/assets/www/js/angular/angular.js \
 /Users/prasathbasuvaraj/Documents/GitWorkSpace/FinKit/platforms/android/assets/www/js/angular/angular.min.js \
@@ -80,13 +82,18 @@
 /Users/prasathbasuvaraj/Documents/GitWorkSpace/FinKit/platforms/android/assets/www/js/angular-route/angular-route.min.js.map \
 /Users/prasathbasuvaraj/Documents/GitWorkSpace/FinKit/platforms/android/assets/www/js/jquery/jquery.min.js \
 /Users/prasathbasuvaraj/Documents/GitWorkSpace/FinKit/platforms/android/assets/www/js/jquery/jquery.min.map \
+/Users/prasathbasuvaraj/Documents/GitWorkSpace/FinKit/platforms/android/assets/www/plugins/com.admob.admobplugin \
+/Users/prasathbasuvaraj/Documents/GitWorkSpace/FinKit/platforms/android/assets/www/plugins/com.admob.admobplugin/www \
+/Users/prasathbasuvaraj/Documents/GitWorkSpace/FinKit/platforms/android/assets/www/plugins/com.admob.admobplugin/www/AdmobPlugin.js \
 /Users/prasathbasuvaraj/Documents/GitWorkSpace/FinKit/platforms/android/assets/www/version/interpolate-filter.js \
 /Users/prasathbasuvaraj/Documents/GitWorkSpace/FinKit/platforms/android/assets/www/version/interpolate-filter_test.js \
 /Users/prasathbasuvaraj/Documents/GitWorkSpace/FinKit/platforms/android/assets/www/version/version-directive.js \
 /Users/prasathbasuvaraj/Documents/GitWorkSpace/FinKit/platforms/android/assets/www/version/version-directive_test.js \
 /Users/prasathbasuvaraj/Documents/GitWorkSpace/FinKit/platforms/android/assets/www/version/version.js \
 /Users/prasathbasuvaraj/Documents/GitWorkSpace/FinKit/platforms/android/assets/www/version/version_test.js \
+/Users/prasathbasuvaraj/Documents/GitWorkSpace/FinKit/platforms/android/assets/www/viewCalc/calcCL.html \
 /Users/prasathbasuvaraj/Documents/GitWorkSpace/FinKit/platforms/android/assets/www/viewCalc/calcFD.html \
+/Users/prasathbasuvaraj/Documents/GitWorkSpace/FinKit/platforms/android/assets/www/viewCalc/calcHL.html \
 /Users/prasathbasuvaraj/Documents/GitWorkSpace/FinKit/platforms/android/assets/www/viewCalc/calcHome.html \
 /Users/prasathbasuvaraj/Documents/GitWorkSpace/FinKit/platforms/android/assets/www/viewCalc/calcPL.html \
 /Users/prasathbasuvaraj/Documents/GitWorkSpace/FinKit/platforms/android/assets/www/viewCalc/calcRD.html \
