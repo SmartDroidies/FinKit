@@ -26,7 +26,8 @@ function processAd() {
     document.addEventListener(admob.Event.onInterstitialFailedReceive,onReceiveFail, false);
     document.addEventListener(admob.Event.onBannerFailedReceive,onReceiveFail, false);
 
-	//admob.showBanner(admob.BannerSize.BANNER, admob.Position.TOP_CENTER, null);
+	//admob.showBanner(admob.BannerSize.BANNER,admob.Position.TOP_APP); 
+    //admob.showBanner(admob.BannerSize.BANNER, admob.Position.TOP_CENTER, null);
 	//showTestBanner();
 }
 
@@ -63,3 +64,36 @@ function onReceiveFail (message) {
     //document.getElementById("alertdiv").innerHTML="load fail: "+message.type+"  "+msg;
 }
 
+
+
+//Rate Us
+function rateus() {
+    var version = device.platform;
+    if(version == "Android") {
+        var url = "https://play.google.com/store/apps/details?id=com.smart.droid.finkit";
+        //var url = "market://details?id=com.smart.droid.finkit";
+        var ref = window.open(url, '_blank');
+        //window.open(url);
+    } else {
+        //FIXME - Change this accordingly
+        var url = "https://play.google.com/store/apps/details?id=com.smart.droid.finkit";
+        //window.open(url);
+    }
+}
+
+
+//Share the app link with user
+function shareApp() {
+    window.plugins.socialsharing.share('Finance App for India - ', 'FinKit App',null,'https://play.google.com/store/apps/details?id=com.smart.droid.finkit');
+}
+
+
+//Provide Feedback
+function feedback() {
+    window.plugin.email.open({
+        to:      ['finkitindia@gmail.com'],
+        subject: 'Feedback on FinKit India',
+        body:    '',
+        isHtml:  true
+    });
+}
