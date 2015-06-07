@@ -70,9 +70,10 @@ function onReceiveFail (message) {
 function rateus() {
     var version = device.platform;
     if(version == "Android") {
-        var url = "https://play.google.com/store/apps/details?id=com.smart.droid.finkit";
-        //var url = "market://details?id=com.smart.droid.finkit";
-        var ref = window.open(url, '_blank');
+        //var url = "https://play.google.com/store/apps/details?id=com.smart.droid.finkit";
+        var url = "market://details?id=com.smart.droid.finkit";
+        window.open(url,"_system");
+        //var ref = window.open(url, '_blank');
         //window.open(url);
     } else {
         //FIXME - Change this accordingly
@@ -91,7 +92,7 @@ function shareApp() {
 //Provide Feedback
 function feedback() {
     window.plugin.email.open({
-        to:      ['finkitindia@gmail.com'],
+        to:      ['smartdroidies@gmail.com'],
         subject: 'Feedback on FinKit India',
         body:    '',
         isHtml:  true
