@@ -13,7 +13,7 @@
                             "count": 1
                         },
                         {
-                            "xml": "<feature name=\"Device\"><param name=\"android-package\" value=\"org.apache.cordova.device.Device\" /></feature>",
+                            "xml": "<feature name=\"EmailComposer\"><param name=\"android-package\" value=\"de.appplant.cordova.emailcomposer.EmailComposer\" /></feature>",
                             "count": 1
                         },
                         {
@@ -21,11 +21,11 @@
                             "count": 1
                         },
                         {
-                            "xml": "<feature name=\"InAppBrowser\"><param name=\"android-package\" value=\"org.apache.cordova.inappbrowser.InAppBrowser\" /></feature>",
+                            "xml": "<feature name=\"Device\"><param name=\"android-package\" value=\"org.apache.cordova.device.Device\" /></feature>",
                             "count": 1
                         },
                         {
-                            "xml": "<feature name=\"EmailComposer\"><param name=\"android-package\" value=\"de.appplant.cordova.emailcomposer.EmailComposer\" /></feature>",
+                            "xml": "<feature name=\"InAppBrowser\"><param name=\"android-package\" value=\"org.apache.cordova.inappbrowser.InAppBrowser\" /></feature>",
                             "count": 1
                         }
                     ]
@@ -66,19 +66,19 @@
         }
     },
     "installed_plugins": {
-        "com.admob.admobplugin": {
+        "com.admob.plugin": {
             "PACKAGE_NAME": "com.smart.droid.finkit"
         },
-        "cordova-plugin-device": {
+        "de.appplant.cordova.plugin.email-composer": {
             "PACKAGE_NAME": "com.smart.droid.finkit"
         },
         "nl.x-services.plugins.socialsharing": {
             "PACKAGE_NAME": "com.smart.droid.finkit"
         },
-        "org.apache.cordova.inappbrowser": {
+        "org.apache.cordova.device": {
             "PACKAGE_NAME": "com.smart.droid.finkit"
         },
-        "de.appplant.cordova.plugin.email-composer": {
+        "org.apache.cordova.inappbrowser": {
             "PACKAGE_NAME": "com.smart.droid.finkit"
         }
     },

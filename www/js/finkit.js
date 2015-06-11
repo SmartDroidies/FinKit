@@ -27,8 +27,10 @@ function processAd() {
     document.addEventListener(admob.Event.onBannerFailedReceive,onReceiveFail, false);
 
 	//admob.showBanner(admob.BannerSize.BANNER,admob.Position.TOP_APP); 
-    //admob.showBanner(admob.BannerSize.BANNER, admob.Position.TOP_CENTER, null);
+    admob.showBanner(admob.BannerSize.BANNER, admob.Position.BOTTOM_CENTER, null);
 	//showTestBanner();
+
+    admob.cacheInterstitial();
 }
 
 
@@ -51,7 +53,7 @@ function showInterstitial(){
 }
 
 function onInterstitialReceive (message) {
-    alert(message.type + " ,you can show it now");
+    //alert(message.type + " ,you can show it now");
     admob.showInterstitial();//show it when received
 }
 
