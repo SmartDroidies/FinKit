@@ -21,6 +21,9 @@ angular.module('finkitApp.viewCalc', ['ngRoute'])
   }).when('/viewHL', {
     templateUrl: 'viewCalc/calcHL.html',
     controller: 'ViewCalcHLCtrl'
+  }).when('/viewINT', {
+    templateUrl: 'viewCalc/calcINT.html',
+    controller: 'ViewCalcINTCtrl'
   });
 }])
 
@@ -199,6 +202,35 @@ angular.module('finkitApp.viewCalc', ['ngRoute'])
 	$scope.displayHLCalc();
 }])
 
+//Controller to calculate interest
+.controller('ViewCalcINTCtrl', ['$scope', '$http', 'CalcService', function($scope, $http, CalcService) {
+	//Function to display calculator UI
+	$scope.displayINTCalc = function() {
+		$("#result").hide();
+
+		var defLoan = {};
+		defLoan.amount = 50000;
+		defLoan.interest = 3;
+		defLoan.tenure = 6;
+		defLoan.tenureType = "1";
+		$scope.loan = defLoan;
+	};
+
+	$scope.calculate = function(loan) {
+		if(!angular.isUndefined(loan) && !angular.isUndefined(loan.amount) && !angular.isUndefined(loan.interest) && !angular.isUndefined(loan.tenure) && !angular.isUndefined(loan.tenureType)) {
+			$scope.result = CalcService.cacluateInt(loan);
+			$("#result").show();
+		}
+	};
+
+	$scope.reset = function() {
+		this.displayINTCalc();
+	};
+	
+	//Default function call
+	$scope.displayINTCalc();
+}])
+
 
 //Service for all the calculations
 .factory('CalcService', function() {
@@ -281,6 +313,19 @@ angular.module('finkitApp.viewCalc', ['ngRoute'])
 		result.interest = (result.total - loan.amount).toFixed(2);
 		return result;
 	}
+
+	// Calculate Monthly Interest
+	factory.cacluateInt = function(loan) {
+		//console.log("Loan : " + JSON.stringify(loan));
+		var result = {}; 
+		var r = (loan.interest*12);
+		var n = loan.tenure/12;
+		
+		result.interest = ((loan.amount * r * n) / 100).toFixed(2);
+		result.monthinterest = (result.interest/loan.tenure).toFixed(2);
+		return result;
+	}
+
 
 	
     return factory;
