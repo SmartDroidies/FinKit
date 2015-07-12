@@ -56,6 +56,12 @@ angular.module('finkitApp.viewKit', ['ngRoute'])
 		//console.log("Account : " + JSON.stringify(account));
 	};
 
+	//Function to share an account
+	$scope.shareAccount = function(account) {
+		console.log("Share Account : " + JSON.stringify(account));
+	};
+
+
 	//Cancel Add/Edit
 	$scope.cancel = function() {
 	    $("#cnt_modify").hide();

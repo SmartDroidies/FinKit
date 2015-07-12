@@ -4,6 +4,9 @@ h1,h2,h3, p, div, span, label {
 	color: #864803;
 } 
 
+body {
+	height: 100%;
+}
 
 .menu {
   list-style: none;
@@ -252,7 +255,7 @@ a.section {
 
 .panel-footer {
 	text-align : right;
-	padding: 2px 10px;
+	padding: 2px 5px;
 }
 
 .panel-heading {
@@ -298,16 +301,16 @@ a.section {
 }
 
 .panel-list-item {
-	padding : 2px;
+	padding : 0px;
 	margin : 5px;
 }
 
 .cnt-list {
-	margin: 20px 5px 5px 5px;
+	margin: 10px 5px 5px 5px;
 
 }
 
 .panel-list-item-body {
 	margin : 0px;
-	padding : 0px;
+	padding : 10px;
 }
