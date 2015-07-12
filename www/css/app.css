@@ -307,8 +307,8 @@ a.section {
 }
 
 .cnt-list {
-	margin: 10px 5px 5px 5px;
-
+	margin: 10px 0px 2px 0px;
+  	padding: 5px;	
 }
 
 .panel-list-item-body {

@@ -1,0 +1,119 @@
+<div class="toolkit">
+	<img id="add-cntrl" ng-click="newVehicle()" class="add-control" src="images/add.png"/>
+</div>
+<div id="cnt_list" class="centered col-xs-12 cnt-list">
+	<div ng-repeat="vehicle in vehicles track by $index" class="col-xs-12 nomargin paddless">
+		<div class="panel panel-default col-xs-12 nomargin paddless">
+			<div class="panel-heading col-xs-12 nomargin paddless">
+				<h3 class="head-short col-xs-8 nomargin paddless">{{vehicle.name}} <br> {{vehicle.number}}</h3>
+				<div class="col-xs-4 nomargin paddless">
+					<img class="submit" ng-click="editVehicle(vehicle)" class="btn btn-warning" src="images/edit.png" />
+					<!--img class="submit" ng-click="deleteVehicle(vehicle.id)" class="btn btn-warning" src="images/delete.png" />
+					<img class="submit" ng-click="viewRecord(vehicle)" class="btn btn-warning" src="images/record.png" /-->
+				</div>
+			</div>
+			<div class="panel-body nomargin paddless col-xs-12">
+				<div id="cnt_ser_list" class="centered col-xs-12 paddless nomargin">
+					<div ng-if='!vehicle.services'>No service history found for this vehicle.<br><button ng-click="newService(vehicle.id)">Add New</button></div>
+					<div ng-if='vehicle.services' class="col-xs-12 nomargin paddless">
+						<table class="col-xs-12 nomargin paddless">
+							<tr>
+								<th class="col-xs-4">Date</th>
+								<th class="col-xs-2">Kms</th>
+								<th class="col-xs-2">Cost</th>
+								<th class="col-xs-4">Action</th>
+							</tr>
+							<tr ng-repeat="service in vehicle.services track by $index">
+								<td class="col-xs-4">{{service.date | date:'mediumDate'}}</td>
+								<td class="col-xs-2">{{service.km}}</td>
+								<td class="col-xs-2">{{service.cost}}</td>
+								<td class="col-xs-4">
+									<img ng-click="viewNote(service)" class="btn cell-icon" src="images/record.png" />
+									<img ng-click="editService(service)" class="btn cell-icon" src="images/edit.png" />
+									<!--img class="submit" ng-click="deleteService(service.id)" class="btn btn-warning" src="images/delete.png" /-->
+								</td>
+							</tr>
+						</table>	
+					</div>
+					
+				</div>	
+				<!-- Form to Add/Modify Service Record -->
+				<div id="cnt_ser_modify" class="entry-sub-form">
+					<form class="rounded-form col-xs-12" data-toggle="validator" role="form">
+						<input class="form-control" id="inputVehId" ng-model="service.vehicleId"/>
+						<input class="form-control" id="inputSerId" ng-model="service.id"/>
+						<div class="row-input col-xs-12">
+							<div class="fld-label col-xs-4">
+								<label for="inputServiceDate">Service Date</label>
+							</div>
+							<div class="fld-value col-xs-8">	
+								<input class="form-control field-medium" type="date" id="inputServiceDate" required ng-model="service.date" placeholder="Service Date" />
+							</div>	
+						</div>
+						<div class="row-input col-xs-12">
+							<div class="fld-label col-xs-4">
+								<label for="inputServiceKM">Service @ KMs</label>
+							</div>
+							<div class="fld-value col-xs-8">	
+								<input class="form-control field-medium" type="text" id="inputServiceKM" required ng-model="service.km" placeholder="Service KMs" />
+							</div>	
+						</div>
+						<div class="row-input col-xs-12">
+							<div class="fld-label col-xs-4">
+								<label for="inputServiceCost">Service Cost</label>
+							</div>
+							<div class="fld-value col-xs-8">	
+								<input class="form-control field-medium" type="text" id="inputServiceCost" ng-model="service.cost" placeholder="Service Cost" />
+							</div>	
+						</div>
+						<div class="row-input col-xs-12">
+							<div class="fld-label col-xs-4">
+								<label for="inputServiceNotes">Service Notes</label>
+							</div>
+							<div class="fld-value col-xs-8">	
+  								<input class="form-control field-medium" type="text" id="inputServiceNotes" ng-model="service.note" placeholder="Service Note" />
+							</div>	
+						</div>
+						<div class="row-input centered col-xs-12">
+							<button id="btnAdd" type="submit" ng-if="!service.id" ng-click="addService(service)" class="btn btn-warning">Add</button>
+							<button id="btnUpdate" type="submit" ng-if="service.id" ng-click="updateService(service)" class="btn btn-warning">Update</button>
+							<button type="submit" ng-click="service={}" class="btn btn-warning">Clear</button>
+							<button type="submit" ng-click="cancelService()" class="btn btn-warning">Cancel</button>
+						</div>
+						<pre>form = {{service | json}}</pre>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="cnt_modify" class="entry-form">
+	<form class="rounded-form col-xs-12" data-toggle="validator" role="form">
+	<input class="form-control" type="hidden" id="inputVehId" ng-model="vehicle.id"/>
+		<div class="row-input col-xs-12">
+			<div class="fld-label col-xs-4">
+				<label for="inputVehName">Vehicle Name</label>
+			</div>
+			<div class="fld-value col-xs-8">	
+				<input class="form-control field-medium" type="text" id="inputVehName" required ng-model="vehicle.name" placeholder="Vehicle Name" />
+			</div>	
+		</div>
+		<div class="row-input col-xs-12">
+			<div class="fld-label col-xs-4">
+				<label for="inputVehNo">Vehicle Number</label>
+			</div>
+			<div class="fld-value col-xs-8">	
+				<input class="form-control field-medium" type="text" id="inputVehNo" required ng-model="vehicle.number" placeholder="Vehicle Number" />
+			</div>	
+		</div>
+		<div class="row-input centered col-xs-12">
+			<button id="btnAdd" type="submit" ng-if="!vehicle.id" ng-click="addVehicle(vehicle)" class="btn btn-warning">Add</button>
+			<button id="btnUpdate" type="submit" ng-if="vehicle.id" ng-click="updateVehicle(vehicle)" class="btn btn-warning">Update</button>
+			<button type="submit" ng-click="vehicle={}" class="btn btn-warning">Clear</button>
+			<button type="submit" ng-click="cancel()" class="btn btn-warning">Cancel</button>
+		</div>
+		<!--pre>form = {{vehicle | json}}</pre-->
+	</form>
+</div>
+
