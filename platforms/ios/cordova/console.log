@@ -1,0 +1,19 @@
+2015-06-16 08:04:21.033 FinKit[745:7294] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/prasathbasuvaraj/Library/Developer/CoreSimulator/Devices/07B8D4A5-EBCE-4F93-A52F-8998C3C96A9C/data/Containers/Data/Application/89F2EB0A-6012-4557-83D6-57B66E3D40E7/Library/Cookies/Cookies.binarycookies
+2015-06-16 08:04:21.446 FinKit[745:7294] Apache Cordova native platform version 3.8.0 is starting.
+2015-06-16 08:04:21.446 FinKit[745:7294] Multi-tasking -> Device: YES, App: YES
+2015-06-16 08:04:21.468 FinKit[745:7294] Unlimited access to network resources
+2015-06-16 08:04:21.483 FinKit[745:7294] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2015-06-16 08:04:22.105 FinKit[745:7294] [CDVTimer][socialsharing] 136.847973ms
+2015-06-16 08:04:22.105 FinKit[745:7294] [CDVTimer][TotalPluginStartup] 137.073994ms
+2015-06-16 08:04:23.080 FinKit[745:7294] Resetting plugins due to page load.
+2015-06-16 08:04:23.446 FinKit[745:7294] Finished load of: file:///Users/prasathbasuvaraj/Library/Developer/CoreSimulator/Devices/07B8D4A5-EBCE-4F93-A52F-8998C3C96A9C/data/Containers/Bundle/Application/1C0C37FE-3A0B-435B-8A78-752A8EE72AC4/FinKit.app/www/index.html#/viewCalc
+2015-06-16 08:04:23.708 FinKit[745:7294] <Google> To get test ads on this device, call: request.testDevices = @[ GAD_SIMULATOR_ID ];
+2015-06-16 08:04:23.708 FinKit[745:7294] -[NSNull objectForKey:]: unrecognized selector sent to instance 0x6656c8
+2015-06-16 08:04:23.715 FinKit[745:7294] *** WebKit discarded an uncaught exception in the webView:decidePolicyForNavigationAction:request:frame:decisionListener: delegate: <NSInvalidArgumentException> -[NSNull objectForKey:]: unrecognized selector sent to instance 0x6656c8

@@ -1,0 +1,6 @@
+[	
+	{"name": "Bank Accounts", "id": "KIT_MA", "imageUrl": "img/kit/account.png", "view": "kitMA"},
+	{"name": "Service Tracker", "id": "KIT_SER", "imageUrl": "img/kit/service.png", "view": "kitSER"},
+	{"name": "Purchase Tracker", "id": "KIT_PUR", "imageUrl": "img/kit/purchase.png", "view": "kitPUR"},
+	{"name": "AMC/Insurance", "id": "KIT_AMC", "imageUrl": "img/kit/insurance.png", "view": "kitAMC"}
+]

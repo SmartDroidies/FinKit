@@ -1,6 +1,12 @@
-<p>This is the listing view for all kit</p>
- <ul>
-    <li ng-repeat="kit in kits">
-      <span>{{kit.name}}</span>
+<ul id="calcList" class="grid-main">
+    <li ng-repeat="kit in kits" class="col-xs-4 grid-cell">
+		<a href="#/{{kit.view}}" class="section">
+			<div class="grid-icon-holder">
+				<img ng-src="{{kit.imageUrl}}" class="grid-icon">
+			</div>	
+			<div class="grid-item">
+				<span class="title below-image">{{kit.name}}</span>
+			</div>		
+		</a>		
     </li>
 </ul>

@@ -3,10 +3,13 @@
 // Declare app level module which depends on views, and components
 angular.module('finkitApp', [
   'ngRoute',
+  'underscore',
   'finkitApp.viewCalc',
   'finkitApp.viewKit',
-  'myApp.version'
+  'myApp.version',
+  'LocalStorageModule'
 ]).
-config(['$routeProvider', function($routeProvider) {
-  $routeProvider.otherwise({redirectTo: '/viewCalc'});
+config(['$routeProvider', 'localStorageServiceProvider', function($routeProvider, localStorageServiceProvider) {
+  $routeProvider.otherwise({redirectTo: '/viewKit'});
+  localStorageServiceProvider.setPrefix('fk');
 }]);

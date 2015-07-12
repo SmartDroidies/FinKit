@@ -1,0 +1,8 @@
+[	
+	{"name": "Fixed Deposit Calculator", "id": "CALC_FD", "imageUrl": "img/calc/fixed_deposit.jpg", "view": "viewFD"},
+	{"name": "Recurring Deposit Calculator", "id": "CALC_RD", "imageUrl": "img/calc/recurring_deposit.jpg", "view": "viewRD"},
+	{"name": "Personal Loan EMI Calculator", "id": "CALC_PL", "imageUrl": "img/calc/pl_emi.jpg", "view": "viewPL"},
+	{"name": "Car Loan EMI Calculator", "id": "CALC_CL", "imageUrl": "img/calc/cl_emi.jpg", "view": "viewCL"},
+	{"name": "Home Loan EMI Calculator", "id": "CALC_HL", "imageUrl": "img/calc/hl_emi.jpg", "view": "viewHL"},
+	{"name": "Monthly Interest Calculator", "id": "CALC_INT", "imageUrl": "img/calc/int_emi.jpg", "view": "viewINT"}	
+]

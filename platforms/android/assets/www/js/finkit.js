@@ -1,7 +1,7 @@
 //Device Ready Event
 document.addEventListener("deviceready", onDeviceReadyAction, false);
 function onDeviceReadyAction() {
-	processAd();
+	//processAd();
 
 	//Handle Menu 
 	$( "#menu-cntrl" ).click(function() {

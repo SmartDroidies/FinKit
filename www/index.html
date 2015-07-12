@@ -18,21 +18,20 @@
 			<li><a href="#/viewKit">Kit View</a></li>
 		</ul-->
 		<nav class="navbar navbar-fixed-top nomargin paddless header" role="navigation">
-		  <div class="container-fluid">
 			<div class="navbar-header main-header">
 				<img id="menu-cntrl" class="menu-control" src="images/menu.png"/>
 				<div class="head_section">
 					<h2 id="main-title" class="main-title">FinKit India</h2>
 				</div>
 			</div>
-		  </div>
 		</nav>
 
 		<div ng-view class="content col-xs-12">
 		</div>
 		<div id="mainmenu" class="mainmenu">
 			<ul class="nav nav-list">
-				<li><a href="#/viewCalc" onclick="hideMenu()">Home</a></li>
+				<li><a href="#/viewCalc" onclick="hideMenu()">Calc</a></li>
+				<li><a href="#/viewKit" onclick="hideMenu()">Kit</a></li>
 	            <li><a onclick="rateus();hideMenu(); return false;">Rate Me</a></li>
 	            <li><a onclick="shareApp();hideMenu();">Share</a></li>
 				<li><a onclick="feedback();hideMenu();">Feedback</a></li>
@@ -43,7 +42,10 @@
 
 		<script src="js/angular/angular.js"></script>
 		<script src="js/angular-route/angular-route.min.js"></script>
+		<script src="js/angular-local-storage/angular-local-storage.js"></script>
 		<script src="js/jquery/jquery.min.js"></script>
+		<script src="js/underscore/underscore.js"></script>
+		<script src="js/underscore/angular-underscore-module.js"></script>  
 		<script src="js/finkit.js"></script>
 		<script src="app.js"></script>
 		<script src="viewCalc/viewCalc.js"></script>

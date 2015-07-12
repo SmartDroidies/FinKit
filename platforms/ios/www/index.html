@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="finkitApp"> 
+	<head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+        <!--meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" /-->
+        <meta http-equiv="Content-Security-Policy" content="default-src *; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' 'unsafe-eval'">
+        <script type="text/javascript" charset="utf-8" src="cordova.js"></script>  
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/app.css">
+        <title>FinKit</title>
+	</head>
+	<body>
+		<!--ul class="menu">
+			<li><a href="#/viewCalc">Calc View</a></li>
+			<li><a href="#/viewKit">Kit View</a></li>
+		</ul-->
+		<nav class="navbar navbar-fixed-top nomargin paddless header" role="navigation">
+		  <div class="container-fluid">
+			<div class="navbar-header main-header">
+				<img id="menu-cntrl" class="menu-control" src="images/menu.png"/>
+				<div class="head_section">
+					<h2 id="main-title" class="main-title">FinKit India</h2>
+				</div>
+			</div>
+		  </div>
+		</nav>
+
+		<div ng-view class="content col-xs-12">
+		</div>
+		<div id="mainmenu" class="mainmenu">
+			<ul class="nav nav-list">
+				<li><a href="#/viewCalc" onclick="hideMenu()">Home</a></li>
+	            <li><a onclick="rateus();hideMenu(); return false;">Rate Me</a></li>
+	            <li><a onclick="shareApp();hideMenu();">Share</a></li>
+				<li><a onclick="feedback();hideMenu();">Feedback</a></li>
+			</ul>
+		</div>
+
+		<!--div>Angular seed app: v<span app-version></span></div-->
+
+		<script src="js/angular/angular.js"></script>
+		<script src="js/angular-route/angular-route.min.js"></script>
+		<script src="js/jquery/jquery.min.js"></script>
+		<script src="js/finkit.js"></script>
+		<script src="app.js"></script>
+		<script src="viewCalc/viewCalc.js"></script>
+		<script src="viewKit/viewKit.js"></script>
+		<script src="components/version/version.js"></script>
+		<script src="components/version/version-directive.js"></script>
+		<script src="components/version/interpolate-filter.js"></script>
+
+	 </body>
+</html>

@@ -1,0 +1,210 @@
+/* app css stylesheet */
+h1,h2,h3, p, div, span, label {
+	font-family: fantasy;
+	color: #864803;
+} 
+
+
+.menu {
+  list-style: none;
+  border-bottom: 0.1em solid black;
+  margin-bottom: 2em;
+  padding: 0 0 0.5em;
+}
+
+.menu:before {
+  content: "[";
+}
+
+.menu:after {
+  content: "]";
+}
+
+.menu > li {
+  display: inline;
+}
+
+.menu > li:before {
+  content: "|";
+  padding-right: 0.3em;
+}
+
+.menu > li:nth-child(1):before {
+  content: "";
+  padding: 0;
+}
+
+body > .content, body > .mainmenu {
+  padding: 50px 0 0 0;
+}
+
+/* Main List Styling */
+ul.list-main {
+	margin: 0px;
+	padding: 5px;	
+}
+
+ul.list-main  li {
+	list-style-type: none;
+	min-height: 60px; 
+	background-color: #EFEFEC;
+  	margin: 5px;	
+}
+
+ul.list-main  li  a {
+  padding: 0px;
+  margin: 0px;
+}
+
+ul.list-main  li  a  h3 {
+	float: left;
+	margin: 5px 10px;
+	padding: 5px;
+	font-size: 20px;
+}
+
+ul.list-main  li  img {
+	height : 50px;
+	width : 50px;
+	float: left;
+}
+
+.after-image {
+	margin-left : 10px; 
+}
+
+img.launch-icon {
+	padding : 5px;
+	margin : 5px;
+}
+
+.rounded-form {
+	padding : 10px;
+	background-color : #EFEFEC;
+}
+
+.row-input {
+	margin : 5px 5px;
+	padding : 0px;
+	width : 100%;
+	min-height : 35px;
+}
+
+.field-label {
+	padding : 2px;
+	width : 50%;
+	float : left;
+	margin-top : 5px;
+}
+
+.field-value {
+	width : 50%;
+	float : left;
+	margin : auto;
+	padding : 2px 2px;
+}
+
+.field-value-multi {
+	float : left;
+	margin : auto;
+	padding: 2px 2px;
+}
+
+.centered {
+	text-align: center;
+}
+
+.result {
+	background-color: #ECDAC2;
+  	padding: 5px 10px;
+}
+
+.result div {
+	padding: 5px 10px;	
+	font-size: 18px;
+  	font-weight: bold;	
+}
+
+.header {
+	background-color: #ECDAC2;
+}
+
+.main-header {
+	position : relative;
+	min-height : 45px;
+}
+
+.menu-control {
+	position : absolute;
+	left : 5px;
+	top : 15px;
+}
+
+.head_section {
+	margin: 5px 5px 5px 30px;
+	vertical-align: middle;
+	height: 100%;	
+}
+
+.main-title {
+	color: #1F1F1F;
+	font-size: 20px;
+	font-weight: bold;	
+	margin: 2px;
+	padding: 10px 0px 0px 5px;
+}
+
+.paddless {
+ 	padding : 0px;
+}
+
+.nomargin {
+ 	margin : 0px; 
+}
+
+.list-item {
+	padding:  5px 5px;
+  	/*
+  	background: #FDF6E8;
+  	box-shadow: 2px 5px 5px 5px #41300E;  
+  	*/
+}
+
+a.section {
+
+}
+
+
+/* Menu Styling */
+#mainmenu  {
+	/*
+	background-color: #EFF0D7;
+	border-right: 2px solid #DADD94;
+	border-radius: 0px 0px 10px 0px;
+	*/
+	background: #EFEFEC;
+	box-shadow: 5px 5px 5px #888888;	
+	position: absolute;
+	top: 0px;
+	display : none;
+}
+
+#mainmenu ul li {
+	border-bottom: 1px Solid #C3C4BF;	
+}
+
+#mainmenu ul li  a {
+	font-size: 20px;
+	color: #864803;	
+	padding-right: 20px;
+}
+
+#mainmenu ul li.nav-header {
+	font-size: 22px;
+	padding: 10px;
+	color: #1F1F1F;	
+	font-weight : bold;
+	background: #ACACAC;
+}
+
+

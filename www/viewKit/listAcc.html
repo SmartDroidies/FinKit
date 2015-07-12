@@ -1,0 +1,97 @@
+<div class="toolkit">
+	<img id="add-cntrl" ng-click="newAccount()" class="add-control" src="images/add.png"/>
+</div>
+
+<div id="cnt_list" class="col-xs-12 cnt-list paddless centered">
+	<div ng-repeat="account in accounts track by $index" class="col-xs-11 paddless nomargin">
+		<div class="col-xs-12 panel panel-default panel-list-item">
+			<div class="col-xs-12 panel-body panel-list-item-body">
+				<table>
+					<tr>
+						<td class="col-label">Acc Holder Name</td>
+						<td class="col-value">{{account.name}}</td>
+					</tr>
+					<tr>
+						<td class="col-label">Acc Number </td>
+						<td class="col-value">{{account.number}}</td>
+					</tr>
+					<tr>
+						<td class="col-label">IFSC Code </td>
+						<td class="col-value">{{account.ifsc}}</td>
+					</tr>
+					<tr ng-if="account.bank">
+						<td class="col-label">Bank </td>
+						<td class="col-value">{{account.bank}}</td>
+					</tr>
+					<tr ng-if="account.branch">
+						<td class="col-label">Branch </td>
+						<td class="col-value">{{account.branch}}</td>
+					</tr>
+				</table>	
+			</div>
+			<div class="col-xs-12 panel-footer">
+			    <img class="submit" ng-click="editAccount(account)" class="btn btn-warning" src="images/edit.png" />
+				<!--img class="submit" ng-click="deleteAccount(account.id)" class="btn btn-warning" src="images/delete.png" /-->
+				<img class="submit" ng-click="shareAccount(account)" class="btn btn-warning" src="images/share.png" />
+
+				<!--button type="submit" ng-click="editAccount(account)" class="btn btn-warning">Edit</button>
+				<button type="submit" ng-click="deleteAccount(account.id)" class="btn btn-warning">Delete</button>
+				<button type="submit" ng-click="shareAccount(account)" class="btn btn-warning">Share</button-->
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="cnt_modify" class="col-xs-12 entry-form nomargin paddless">
+	<form class="rounded-form col-xs-12" data-toggle="validator" role="form">
+	<input class="form-control" type="hidden" id="inputAccId" ng-model="account.id"/>
+		<div class="row-input col-xs-12">
+			<div class="fld-label col-xs-4">
+				<label for="inputAccHolder">Acc Holder Name</label>
+			</div>
+			<div class="fld-value col-xs-8">	
+				<input class="form-control field-medium" type="text" id="inputAccHolder" required ng-model="account.name" placeholder="Acc Holder Name" />
+			</div>	
+		</div>
+		<div class="row-input col-xs-12">
+			<div class="fld-label col-xs-4">
+				<label for="inputAccNo">Acc Number</label>
+			</div>
+			<div class="fld-value col-xs-8">	
+				<input class="form-control field-medium" type="number" id="inputAccNo" required ng-model="account.number" placeholder="Acc Number" />
+			</div>	
+		</div>
+		<div class="row-input col-xs-12">
+			<div class="fld-label col-xs-4">
+				<label for="inputIFSC">IFSC Code</label>
+			</div>
+			<div class="fld-value col-xs-8">	
+				<input class="form-control field-medium" type="text" id="inputIFSC" required ng-model="account.ifsc" placeholder="IFSC Code" />
+			</div>	
+		</div>
+		<div class="row-input col-xs-12">
+			<div class="fld-label col-xs-4">
+				<label for="inputBank">Bank</label>
+			</div>
+			<div class="fld-value col-xs-8">	
+				<input class="form-control field-medium" type="text" id="inputBank" ng-model="account.bank" placeholder="Bank Name" />
+			</div>	
+		</div>
+		<div class="row-input col-xs-12">
+			<div class="fld-label col-xs-4">
+				<label for="inputBranch">Branch</label>
+			</div>
+			<div class="fld-value col-xs-8">	
+				<input class="form-control field-medium" type="text" id="inputBranch" ng-model="account.branch" placeholder="Branch" />
+			</div>	
+		</div>
+		<div class="row-input centered col-xs-12">
+			<button id="btnAdd" type="submit" ng-if="!account.id" ng-click="addAccount(account)" class="btn btn-warning">Add</button>
+			<button id="btnUpdate" type="submit" ng-if="account.id" ng-click="updateAccount(account)" class="btn btn-warning">Update</button>
+			<button type="submit" ng-click="account={}" class="btn btn-warning">Clear</button>
+			<button type="submit" ng-click="cancel()" class="btn btn-warning">Cancel</button>
+		</div>
+		<!--pre>form = {{account | json}}</pre-->
+	</form>
+</div>
+
