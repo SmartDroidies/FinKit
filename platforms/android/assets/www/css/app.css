@@ -4,6 +4,9 @@ h1,h2,h3, p, div, span, label {
 	color: #864803;
 } 
 
+body {
+	height: 100%;
+}
 
 .menu {
   list-style: none;
@@ -36,6 +39,7 @@ h1,h2,h3, p, div, span, label {
 
 body > .content {
   padding: 50px 0 0 0;
+  overflow: scroll;
 }
 
 body > .mainmenu {
@@ -309,5 +313,5 @@ a.section {
 
 .panel-list-item-body {
 	margin : 0px;
-	padding : 0px;
+	padding : 10px;
 }

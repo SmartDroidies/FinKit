@@ -59,6 +59,9 @@ angular.module('finkitApp.viewKit', ['ngRoute'])
 	//Function to share an account
 	$scope.shareAccount = function(account) {
 		console.log("Share Account : " + JSON.stringify(account));
+		var account = "Name : " + account.name + "\n" + "Account Number : " + account.number + "\n" + "IFSC : " + account.ifsc + "\n" + "Bank Name : " + account.bank + "\n" + "Bank Branch : " + account.branch;
+		window.plugins.socialsharing.share(account, 'Account Details');
+
 	};
 
 
